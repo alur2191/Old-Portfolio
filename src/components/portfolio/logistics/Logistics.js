@@ -1,0 +1,56 @@
+import React from 'react'
+import {motion} from 'framer-motion'
+import html5 from '../../../img/html5-bw.svg'
+import css3 from '../../../img/css3-bw.svg'
+import bootstrap from '../../../img/bootstrap-bw.svg'
+import gsap from '../../../img/gsap-greensock-bw.svg'
+import js from '../../../img/js-bw.svg'
+import truck from '../../../img/truck.jpg'
+import logo from '../../../img/logo-logistics.png'
+// import bem from '../../img/bem-bw.svg'
+import Description from '../Description'
+
+export default function Logistics({index}) {
+  return (
+    
+    <motion.div style={{display:'grid',gridTemplateColumns:'1fr 5fr',height:400}}  initial={{opacity:0}} animate={{opacity:1, marginLeft:0}} transition={{duration:0.8}} exit={{opacity:0,transition:{duration:0.4}}}>
+        <div id="logistics" className="disable-select" style={{position:'relative', margin:'0 auto',marginLeft:120}}  >
+          <motion.img src={truck} alt='Logistics Website' 
+            initial={{ opacity:0, marginLeft:-100 }}
+            animate={{ opacity:1, marginLeft:0}}
+            transition={{duration: 0.5}}
+          />
+          <motion.div style={{  position:'absolute',width:280,height:50,top:1, background:'#191919'}} alt="Logistics website" initial={{ opacity:0, }}
+              animate={{ opacity:1}}
+              transition={{  delay:0.2}}>
+            <img src={logo} alt="" style={{display:'flex',height:35, margin:'auto', marginTop:8}} />
+          </motion.div>
+          <motion.div style={{position:'absolute',height:130, top:260, marginLeft:7, marginRight:7, width:258, background:'white', border:'#eeeeee solid 4px', borderBottom:'none'}} initial={{         opacity:0 }}
+              animate={{ opacity:1,  }}
+              transition={{  }}>
+            <motion.div style={{ display:'flex',justifyContent:'center',flexDirection:'column' }} 
+              initial={{ opacity:0,marginTop:"20px" }}
+              animate={{ opacity:1, marginTop:"0px" }}
+              transition={{ delay:0.3 }}>
+              <p style={{marginRight:'auto',marginLeft: 60,marginBottom:5, marginTop:10}}>Origin</p>
+              <div>
+                <i className="las la-map-marker-alt" style={{background:'#efefef',display:'inline',fontSize:20,position:'relative',top:2, border:'#d1d1d1 solid 1px', borderRight:0, paddingTop:1,paddingBottom:2, paddingLeft:3, paddingRight:3,marginLeft: 33}}></i>
+                <input disabled type="text" style={{borderRadius:0, border:'#d1d1d1 solid 1px', borderLeft:0, width: 170, height:22, background:'#f9f9f9', marginLeft:'auto',marginRight:'auto'}}/>
+              </div>
+            </motion.div>
+            <motion.div style={{display:'flex',justifyContent:'center',flexDirection:'column',}} initial={{ opacity:0,marginTop:"20px" }}
+              animate={{ opacity:1, marginTop:"0px" }}
+              transition={{ delay:0.4}}>
+              <p style={{marginRight:'auto',marginLeft: 60,marginBottom:5, marginTop:5}}>Destination</p>
+              <div>
+                
+                <i className="las la-map-marker-alt" style={{background:'#efefef',display:'inline',fontSize:20,position:'relative',top:2, border:'#d1d1d1 solid 1px', borderRight:0, paddingTop:1,paddingBottom:2, paddingLeft:3,paddingRight:3,marginLeft: 33}}></i>
+                <input disabled type="text" style={{borderRadius:0, border:'#d1d1d1 solid 1px', borderLeft:0, width: 170, height:22, background:'#f9f9f9', marginLeft:'auto',marginRight:'auto'}}/>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+        <Description index={index}/>
+    </motion.div>
+  )
+}

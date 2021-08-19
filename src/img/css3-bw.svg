@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 298 420"
+	 style="enable-background:new 0 0 298 420;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#191919;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#AFAFAF;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#D6D6D6;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#EBEBEB;}
+</style>
+<title>Slice 1</title>
+<description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+<g>
+	<g>
+		<path id="Shape" class="st0" d="M233.2,15.7h-24.7l25.7,27.9v13.3h-52.9V41.3h25.7l-25.7-27.9V0.1h51.9V15.7L233.2,15.7z
+			 M170.8,15.7h-24.7l25.7,27.9v13.3h-52.9V41.3h25.7l-25.7-27.9V0.1h51.9V15.7L170.8,15.7z M109,16.3H82.4v24.3H109v16.2H63.4V0.1
+			H109V16.3L109,16.3z"/>
+		<path class="st1" d="M27.1,386.3L0.1,82.7h297.4l-27.1,303.6L148.6,420L27.1,386.3z"/>
+		<path class="st2" d="M148.8,394.2l98.4-27.3l23.2-259.4H148.8V394.2z"/>
+		<g id="Group" transform="translate(55.000000, 142.000000)">
+			<path class="st3" d="M93.8,75.5h49.3l3.4-38.1H93.8V0.1h0.1h93.2l-0.9,10l-9.2,102.6H93.8V75.5z"/>
+			<path class="st4" d="M94,172.2l-0.2,0l-41.5-11.2l-2.7-29.7H29.6H12.4l5.2,58.5L93.8,211l0.2,0V172.2z"/>
+			<path class="st3" d="M139.9,111.2l-4.5,49.9l-41.5,11.2V211l76.3-21.2l0.6-6.3l6.5-72.4H139.9z"/>
+			<path class="st4" d="M93.9,0.1v23.1v14v0.1H4.1H4L3.2,29L1.5,10.1l-0.9-10H93.9z"/>
+			<path class="st4" d="M93.8,75.5v23.1v14v0.1H53h-0.1l-0.7-8.4l-1.7-18.9l-0.9-10H93.8z"/>
+		</g>
+	</g>
+</g>
+</svg>
