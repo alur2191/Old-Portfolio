@@ -227,10 +227,6 @@ ul > li:last-child {
     background: var(--primary-color-bright);
   }
 
-  #sidebar {
-    display: none;
-  }
-
   #about {
     padding: 0 30px;
   }
@@ -238,6 +234,50 @@ ul > li:last-child {
   #main {
     display: flex;
     height: 100vh;
+    flex-direction: column;
+  }
+  #navbar {
+    color: var(--primary-color-bright);
+  }
+
+  #navbar > ul > li > a {
+    color: var(--primary-color-bright);
+    text-decoration: none;
+  }
+
+  #navbar > ul > li > a:visited {
+    color: var(--primary-color-bright);
+    text-decoration: none;
+  }
+  #navbar > ul {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+  }
+
+  #navbar > ul > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #sidebar {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: flex-end;
+    color: var(--primary-color-bright);
+    background: var(--primary-color-dark);
+  }
+
+  .nav-arrow {
+    display: none;
+  }
+
+  ul > li {
+    margin: 0 10px;
+    list-style: none;
+    text-transform: uppercase;
   }
 }
 
