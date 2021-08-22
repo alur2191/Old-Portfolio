@@ -47,8 +47,8 @@ function Portfolio() {
 
     <div className="page" >
       
-      <motion.div style={{display:'grid',gridTemplateColumns:'2fr 3fr',
-      marginBottom:40}} >
+      <motion.div style={{display:'grid',gridTemplateColumns: '280px 520px',
+      marginBottom:40, marginLeft: 150}} >
         <span></span>
         <motion.h1 style={{textAlign:'center'}} initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.3,duration:0.8}} exit={{opacity:0,transition:{duration:0.4}}}>{content[index].title}</motion.h1>
         

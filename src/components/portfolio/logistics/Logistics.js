@@ -13,8 +13,8 @@ import Description from '../Description'
 export default function Logistics({index}) {
   return (
     
-    <motion.div style={{display:'grid',gridTemplateColumns:'1fr 5fr',height:400}}  initial={{opacity:0}} animate={{opacity:1, marginLeft:0}} transition={{duration:0.8}} exit={{opacity:0,transition:{duration:0.4}}}>
-        <div id="logistics" className="disable-select" style={{position:'relative', margin:'0 auto',marginLeft:120}}  >
+    <motion.div className="porftolio-details"  initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.8}} exit={{opacity:0,transition:{duration:0.4}}}>
+        <div id="logistics" className="disable-select portoflio-showcase"  >
           <motion.img src={truck} alt='Logistics Website' 
             initial={{ opacity:0, marginLeft:-100 }}
             animate={{ opacity:1, marginLeft:0}}
@@ -25,17 +25,23 @@ export default function Logistics({index}) {
               transition={{  delay:0.2}}>
             <img src={logo} alt="" style={{display:'flex',height:35, margin:'auto', marginTop:8}} />
           </motion.div>
-          <motion.div style={{position:'absolute',height:130, top:260, marginLeft:7, marginRight:7, width:258, background:'white', border:'#eeeeee solid 4px', borderBottom:'none'}} initial={{         opacity:0 }}
-              animate={{ opacity:1,  }}
-              transition={{  }}>
-            <motion.div style={{ display:'flex',justifyContent:'center',flexDirection:'column' }} 
-              initial={{ opacity:0,marginTop:"20px" }}
-              animate={{ opacity:1, marginTop:"0px" }}
+          <motion.div 
+              style={{position:'absolute',height:130, top:260, marginLeft:7, marginRight:7, width:258, background:'white', border:'#eeeeee solid 4px', borderBottom:'none'}} 
+              initial={{ opacity:0 }}
+              animate={{ opacity:1 }}>
+            <motion.div style={{ display:'flex',justifyContent:'center', flexDirection:'column' }} 
+              initial={{ opacity:0, marginTop: "20px" }}
+              animate={{ opacity:1, marginTop: "0px" }}
               transition={{ delay:0.3 }}>
-              <p style={{marginRight:'auto',marginLeft: 60,marginBottom:5, marginTop:10}}>Origin</p>
+              <p style={{marginRight:'auto', marginLeft: 60, marginBottom:5, marginTop:10}}>Origin</p>
               <div>
-                <i className="las la-map-marker-alt" style={{background:'#efefef',display:'inline',fontSize:20,position:'relative',top:2, border:'#d1d1d1 solid 1px', borderRight:0, paddingTop:1,paddingBottom:2, paddingLeft:3, paddingRight:3,marginLeft: 33}}></i>
-                <input disabled type="text" style={{borderRadius:0, border:'#d1d1d1 solid 1px', borderLeft:0, width: 170, height:22, background:'#f9f9f9', marginLeft:'auto',marginRight:'auto'}}/>
+                <i className="las la-map-marker-alt" 
+                style={{ background:'#efefef', display:'inline',fontSize:20,position:'relative',top:2, border:'#d1d1d1 solid 1px', borderRight:0, paddingTop:1,paddingBottom:2, paddingLeft:3, paddingRight:3,marginLeft: 33}}
+                ></i>
+                <input 
+                disabled 
+                type="text" 
+                style={{borderRadius:0, border:'#d1d1d1 solid 1px', borderLeft:0, width: 170, height:22, background:'#f9f9f9', marginLeft:'auto',marginRight:'auto'}}/>
               </div>
             </motion.div>
             <motion.div style={{display:'flex',justifyContent:'center',flexDirection:'column',}} initial={{ opacity:0,marginTop:"20px" }}

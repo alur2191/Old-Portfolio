@@ -14,15 +14,15 @@ import content from '../content'
 export default function Charts({index}) {
   return (
     
-    <motion.div style={{display:'grid',gridTemplateColumns:'2fr 3fr'}} initial={{opacity:0}} animate={{opacity:1, marginLeft:0}} transition={{duration:0.8}} exit={{opacity:0,transition:{duration:0.4}}}>
+    <motion.div className="porftolio-details" initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.8}} exit={{opacity:0,transition:{duration:0.4}}}>
         
         <motion.div 
-          id="charts" className="disable-select" 
-          style={{position:'relative', margin:'0 auto', marginLeft:100, backgroundColor:'grey', height:400,width:280}} 
+          id="charts" className="disable-select " 
+          style={{position:'relative',  backgroundColor:'grey', height:400,width:280}} 
           initial={{opacity:0,scaleY:0}} 
           animate={{opacity:1,scaleY:1}} 
           transition={{duration:0.8}} 
-          exit={{opacity:0,transition:{duration:0.4}, scaleX:0}}>
+          exit={{opacity:0,transition:{duration:0.4},scaleX:0}}>
         </motion.div>
         
         <Description index={index}/>

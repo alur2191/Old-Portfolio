@@ -9,7 +9,7 @@ import js from '../../img/js-bw.svg'
 import content from './content'
 export default function Description({index}) {
   return (
-    <motion.div style={{display:'flex', justifyContent:'center'}} initial={{opacity:0}} animate={{opacity:1, marginLeft:0}} transition={{duration:0.8}} exit={{opacity:0,transition:{duration:0.4}}}>
+    <motion.div className='portfolio-description' initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.8}} exit={{opacity:0,transition:{duration:0.4}}}>
         
         
         <div style={{ display:'flex',flexDirection:'column',justifyContent:'space-around',width:450, lineHeight:1.7, textAlign:'center'}} >
