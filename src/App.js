@@ -17,6 +17,7 @@ function App() {
   return (
     <PageState>
       {/* <MobileNav /> */}
+      <div className="mobile-nav"></div>
       <div id='main'>
         <DesktopNav />
         <AnimatePresence exitBeforeEnter>

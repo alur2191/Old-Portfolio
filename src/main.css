@@ -29,6 +29,38 @@ h6 {
   margin: 0;
 }
 
+.mb50 {
+  margin-bottom: 50px;
+}
+
+.mb100 {
+  margin-bottom: 100px;
+}
+
+.mb150 {
+  margin-bottom: 150px;
+}
+
+.mb200 {
+  margin-bottom: 200px;
+}
+
+.pb50 {
+  padding-bottom: 50px;
+}
+
+.pb100 {
+  padding-bottom: 100px;
+}
+
+.pb150 {
+  padding-bottom: 150px;
+}
+
+.pb200 {
+  padding-bottom: 200px;
+}
+
 input,
 textarea {
   background: #afafaf;
@@ -108,11 +140,18 @@ ul > li:last-child {
 #navbar {
   background: var(--primary-color-dark);
   color: var(--primary-color-bright);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 #navbar > ul > li > a:visited {
   color: var(--primary-color-bright);
   text-decoration: none;
+}
+
+.nav-lines {
+  display: none;
 }
 
 .slide-nav {
@@ -147,7 +186,7 @@ ul > li:last-child {
 .center {
   align-items: center;
 }
-.portoflio-showcase {
+.portfolio-showcase {
   position: relative;
   margin: 0 auto;
 }
@@ -159,11 +198,25 @@ ul > li:last-child {
   height: 400px;
 }
 
-.porftolio-details {
+.portfolio-details {
   display: grid;
   grid-template-columns: 280px 520px;
   height: 400;
   margin-left: 100px;
+}
+
+.portfolio-title {
+  display: grid;
+  grid-template-columns: 280px 520px;
+  margin-bottom: 40px;
+  margin-left: 100px;
+}
+
+.portfolio-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 50;
+  margin-left: 550;
 }
 
 .nav-arrow {
@@ -255,7 +308,7 @@ ul > li:last-child {
     display: flex;
     height: 100vh;
     flex-direction: column;
-    margin: 0;
+    margin: 0 auto;
   }
   #navbar {
     color: var(--primary-color-bright);
@@ -282,15 +335,23 @@ ul > li:last-child {
     justify-content: center;
   }
 
+  .mobile-nav {
+    position: absolute;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    background-color: var(--primary-color-dark);
+  }
+
   #sidebar {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    align-items: flex-end;
     color: var(--primary-color-bright);
-    background: var(--primary-color-dark);
     display: flex;
     align-items: center;
+    z-index: 1;
+    height: 80px;
   }
 
   .nav-arrow {
@@ -306,7 +367,7 @@ ul > li:last-child {
     padding: 0 130px;
   }
 
-  .portoflio-showcase {
+  .portfolio-showcase {
     position: relative;
     margin: 0;
   }
@@ -318,22 +379,27 @@ ul > li:last-child {
     height: 400px;
   }
 
-  .porftolio-details {
+  .portfolio-details {
     display: grid;
     grid-template-columns: 280px 420px;
     align-content: space-between;
     justify-content: space-around;
     margin: 0;
   }
+  .portfolio-title {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .mb50 {
+    margin-bottom: 50px;
+  }
 }
 
 @media (max-width: 768px) {
   body {
     background: var(--primary-color-bright);
-  }
-
-  #sidebar {
-    display: none;
   }
 
   #about {
@@ -343,5 +409,79 @@ ul > li:last-child {
   #main {
     display: flex;
     height: 100vh;
+  }
+
+  #sidebar {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    color: var(--primary-color-bright);
+    display: flex;
+    align-items: center;
+    z-index: 1;
+  }
+
+  #main {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  #navbar {
+    display: none;
+  }
+
+  #navbar > ul > li > a {
+    color: var(--primary-color-bright);
+    text-decoration: none;
+  }
+
+  #navbar > ul > li > a:visited {
+    color: var(--primary-color-bright);
+    text-decoration: none;
+  }
+  #navbar > ul {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+  }
+
+  #navbar > ul > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .mobile-nav {
+    position: absolute;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    background-color: var(--primary-color-dark);
+  }
+
+  .nav-arrow {
+    display: none;
+  }
+
+  .nav-lines {
+    display: initial;
+  }
+  .portfolio-title {
+    display: initial;
+    margin-left: 0;
+  }
+  .portfolio-details {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .portfolio-description {
+    margin: 0;
+    margin-top: 80px;
+  }
+  .page {
+    height: auto;
+    margin-top: 60px;
   }
 }

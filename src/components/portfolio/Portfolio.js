@@ -47,8 +47,7 @@ function Portfolio() {
 
     <div className="page" >
       
-      <motion.div style={{display:'grid',gridTemplateColumns: '280px 520px',
-      marginBottom:40, marginLeft: 150}} >
+      <motion.div className="portfolio-title mb50"  >
         <span></span>
         <motion.h1 style={{textAlign:'center'}} initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.3,duration:0.8}} exit={{opacity:0,transition:{duration:0.4}}}>{content[index].title}</motion.h1>
         
@@ -56,7 +55,7 @@ function Portfolio() {
       </motion.div>
       
       {checkPage()}
-      <motion.div className="disable-select" style={{display:'flex', justifyContent:'center',marginTop:50, marginLeft:550, }} initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.5,duration:0.8}} exit={{opacity:0,transition:{duration:0.4}}}>
+      <motion.div className="disable-select portfolio-nav"  initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.5,duration:0.8}} exit={{opacity:0,transition:{duration:0.4}}}>
         <button className="slide-nav" onClick={()=>previous()}>{"<"}</button>
         <span style={{margin:'0 10px',display: 'flex',flexDirection: 'column',justifyContent: 'center'}}>{index+1} / {content.length}</span>
         <button className="slide-nav" onClick={()=>next()}>{">"}</button>

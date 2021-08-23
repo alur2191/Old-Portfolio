@@ -13,8 +13,8 @@ import Description from '../Description'
 export default function Logistics({index}) {
   return (
     
-    <motion.div className="porftolio-details"  initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.8}} exit={{opacity:0,transition:{duration:0.4}}}>
-        <div id="logistics" className="disable-select portoflio-showcase"  >
+    <motion.div className="portfolio-details"  initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.8}} exit={{opacity:0,transition:{duration:0.4}}}>
+        <div id="logistics mb100" className="disable-select portfolio-showcase"  >
           <motion.img src={truck} alt='Logistics Website' 
             initial={{ opacity:0, marginLeft:-100 }}
             animate={{ opacity:1, marginLeft:0}}
@@ -44,7 +44,7 @@ export default function Logistics({index}) {
                 style={{borderRadius:0, border:'#d1d1d1 solid 1px', borderLeft:0, width: 170, height:22, background:'#f9f9f9', marginLeft:'auto',marginRight:'auto'}}/>
               </div>
             </motion.div>
-            <motion.div style={{display:'flex',justifyContent:'center',flexDirection:'column',}} initial={{ opacity:0,marginTop:"20px" }}
+            <motion.div style={{display:'flex',justifyContent:'center',flexDirection:'column'}} initial={{ opacity:0,marginTop:"20px" }}
               animate={{ opacity:1, marginTop:"0px" }}
               transition={{ delay:0.4}}>
               <p style={{marginRight:'auto',marginLeft: 60,marginBottom:5, marginTop:5}}>Destination</p>

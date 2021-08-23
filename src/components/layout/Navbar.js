@@ -27,7 +27,7 @@ export default function Navbar() {
   // const checkActive 
   return (
     
-      <div id='navbar' style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
+      <div id='navbar'>
         <ul>
           <li><NavLink exact className='nav-item' activeClassName="active" to={'/'} onMouseOver={() => arrowRef.current.style.marginTop = '-80px'} onClick={()=>{
             setCurrent('/')
@@ -44,6 +44,7 @@ export default function Navbar() {
         </ul>
         <span className='nav-arrow' ref={arrowRef}>
         </span>
+        
       </div>
       
   )

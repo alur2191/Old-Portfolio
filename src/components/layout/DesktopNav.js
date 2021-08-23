@@ -8,7 +8,7 @@ export default function DesktopNav() {
     <div id='sidebar' >
       <span style={{fontWeight:'bold', fontSize:20, marginRight:25}}>DAVISjs</span>
       <Navbar />
-      <span></span>
+      <span><i class="nav-lines las la-bars" style={{fontSize:30}}></i></span>
     </div>
   )
 }

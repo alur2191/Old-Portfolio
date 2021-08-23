@@ -75,7 +75,7 @@ function About() {
     
         <div  className="page">
           <div id='about'>
-            <motion.h1 style={{ textAlign:'center',marginBottom:30}} initial={{opacity:0,scale:1}} animate={{opacity:1}} transition={{duration:0.3}} exit={{opacity:0,scale:0.8,transition:{duration:0.4}}}>Front-End Developer Based in Los Angeles</motion.h1>
+            <motion.h1 className="mb50" style={{ textAlign:'center'}} initial={{opacity:0,scale:1}} animate={{opacity:1}} transition={{duration:0.3}} exit={{opacity:0,scale:0.8,transition:{duration:0.4}}}>Front-End Developer Based in Los Angeles</motion.h1>
             
             <motion.img style={{float:'left', height: 400, marginRight:20}} src={about} alt="Frontend developer" initial={{opacity:0,scale:1}} animate={{opacity:1}} transition={{delay:0.2,duration:0.3}} exit={{opacity:0,scale:0.8,transition:{duration:0.4}}}/>
             <motion.p initial={{opacity:0,scale:1}} animate={{opacity:1}} transition={{delay:0.4,duration:0.3}} exit={{opacity:0,scale:0.8,transition:{duration:0.4}}}>I am a Frontend developer with limited Backend experience. My focus is on JavaScript with React.js as my framework of choice. Some of the libraries I've used in my projects are ThreeJS, and Framer Motion, and GreenSock GSAP. Experience setting up CMS (Wordpress, Joomla) websites through FTP and SSH, managing MySQL databases with phpMyAdmin, and deploying on CPanel and static hosting.</motion.p> 

@@ -14,7 +14,7 @@ import content from '../content'
 export default function Charts({index}) {
   return (
     
-    <motion.div className="porftolio-details" initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.8}} exit={{opacity:0,transition:{duration:0.4}}}>
+    <motion.div className="portfolio-details" initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.8}} exit={{opacity:0,transition:{duration:0.4}}}>
         
         <motion.div 
           id="charts" className="disable-select " 
