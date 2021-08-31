@@ -376,7 +376,9 @@ ul > li:last-child {
   .nav-arrow {
     display: none;
   }
-
+  .nav-slider {
+    display: none;
+  }
   ul > li {
     margin: 0 10px;
     list-style: none;
