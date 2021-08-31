@@ -108,12 +108,16 @@ button:hover {
   cursor: pointer;
 }
 
+.clickable:hover {
+  cursor: pointer;
+}
+
 ul {
+  display: inline-block;
   padding: 0;
   margin: 0;
-  text-align: right;
-  display: inline-block;
 }
+
 ul > li {
   margin-right: 15px;
   list-style: none;
@@ -132,11 +136,6 @@ ul > li:last-child {
   color: white;
 }
 
-#navbar > ul > li > a {
-  color: var(--primary-color-bright);
-  text-decoration: none;
-}
-
 #navbar {
   background: var(--primary-color-dark);
   color: var(--primary-color-bright);
@@ -144,7 +143,13 @@ ul > li:last-child {
   justify-content: flex-end;
   align-items: center;
 }
-
+#navbar > ul {
+  text-align: right;
+}
+#navbar > ul > li > a {
+  color: var(--primary-color-bright);
+  text-decoration: none;
+}
 #navbar > ul > li > a:visited {
   color: var(--primary-color-bright);
   text-decoration: none;
@@ -181,6 +186,16 @@ ul > li:last-child {
   padding: 0px 120px;
   text-justify: justify;
   line-height: 1.7;
+}
+
+#about-img {
+  float: left;
+  height: 400px;
+  margin-right: 20px;
+}
+
+#running-text > div {
+  display: inline;
 }
 
 .center {
@@ -268,6 +283,10 @@ ul > li:last-child {
   100% {
     opacity: 1;
   }
+}
+
+.nav-slider {
+  display: none;
 }
 
 #transition {
@@ -367,6 +386,10 @@ ul > li:last-child {
     padding: 0 130px;
   }
 
+  #about > h1 {
+    font-size: 1.5rem;
+  }
+
   .portfolio-showcase {
     position: relative;
     margin: 0;
@@ -406,6 +429,27 @@ ul > li:last-child {
     padding: 0 30px;
   }
 
+  #about-img {
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: 0 100%;
+    margin-bottom: 20px;
+  }
+
+  #about > h1 {
+    max-width: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
   #main {
     display: flex;
     height: 100vh;
@@ -413,12 +457,16 @@ ul > li:last-child {
 
   #sidebar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0px 30px;
     flex-direction: row;
     color: var(--primary-color-bright);
-    display: flex;
     align-items: center;
     z-index: 1;
+    height: 60px;
+  }
+  #sidebar > * {
+    padding: 15px 0;
   }
 
   #main {
@@ -467,9 +515,41 @@ ul > li:last-child {
   .nav-lines {
     display: initial;
   }
+
+  .nav-slider {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 130px;
+    background-color: var(--primary-color-dark);
+  }
+  .nav-slider > #navbar {
+    display: block;
+  }
+  .nav-slider > #navbar > ul {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 30px;
+  }
+  .nav-slider > #navbar > ul > li {
+    color: var(--primary-color-bright);
+    font-size: 18px;
+    margin-bottom: 30px;
+    margin-right: 0px;
+    text-align: center;
+  }
+  .nav-slider > span {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+  }
+
   .portfolio-title {
     display: initial;
     margin-left: 0;
+
+    margin-bottom: 30px;
   }
   .portfolio-details {
     display: flex;
@@ -478,10 +558,24 @@ ul > li:last-child {
   }
   .portfolio-description {
     margin: 0;
-    margin-top: 80px;
   }
   .page {
     height: auto;
-    margin-top: 60px;
+    margin-top: 30px;
+  }
+  #logistics {
+    margin-bottom: 100px;
+  }
+  .portfolio-description > div > p {
+    padding: 0px 15px;
+  }
+}
+
+@media (max-width: 950px) {
+  #running-text {
+    text-align: center;
+  }
+  #running-text > div {
+    display: block;
   }
 }
