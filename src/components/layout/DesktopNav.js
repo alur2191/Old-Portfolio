@@ -15,7 +15,7 @@ export default function DesktopNav() {
   const isMobile = useMediaQuery({query:'(max-width: 768px)'})
   return (
     <div id='sidebar' >
-      <Link className='logo' to={'/'} style={{fontWeight:'bold', fontSize:20, marginRight:25}}>DAVISjs</Link>
+      <span className='logo disable-select' style={{fontWeight:'bold', fontSize:20, marginRight:25}} >DAVISjs</span>
       <Navbar />
       <span className="clickable">
         <i 
@@ -27,7 +27,7 @@ export default function DesktopNav() {
       </span>
       {isMobile &&
       <motion.div className="nav-slider" ref={menuRef}>
-        <Navbar />
+        <Navbar menuRef={menuRef}/>
         <span className="clickable">
           <i 
           class="las la-times" 

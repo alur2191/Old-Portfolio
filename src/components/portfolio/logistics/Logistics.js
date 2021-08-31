@@ -15,15 +15,15 @@ export default function Logistics({index}) {
     
     <motion.div className="portfolio-details"  initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.8}} exit={{opacity:0,transition:{duration:0.4}}}>
         <div id="logistics" className="disable-select portfolio-showcase"  >
-          <motion.img src={truck} alt='Logistics Website' 
+          <motion.img className="disable-drag" src={truck} alt='Logistics Website' 
             initial={{ opacity:0, marginLeft:-100 }}
             animate={{ opacity:1, marginLeft:0}}
             transition={{duration: 0.5}}
           />
-          <motion.div alt="Logistics website" initial={{ opacity:0, }}
+          <motion.div style={{position: 'absolute',top: 0, backgroundColor: '#181818',width:280, display:'flex', justifyContent:'center' }} initial={{ opacity:0, }}
               animate={{ opacity:1}}
               transition={{  delay:0.2}}>
-            <img src={logo} alt="" />
+            <img className="disable-drag" style={{height: 40, padding:'10px 0'}} src={logo} alt="Logistics Website Logo" />
           </motion.div>
           <motion.div 
               style={{position:'absolute',height:130, top:260, marginLeft:7, marginRight:7, width:258, background:'white', border:'#eeeeee solid 4px', borderBottom:'none'}} 

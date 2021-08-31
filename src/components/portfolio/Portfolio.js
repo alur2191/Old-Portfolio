@@ -4,7 +4,9 @@ import Logistics from './logistics/Logistics'
 import Charts from './charts/Charts'
 import {motion} from 'framer-motion'
 import content from './content'
-
+import { useSwipeable } from 'react-swipeable';
+import { useMediaQuery } from 'react-responsive'
+import swipe from '../../img/swipe.png'
 const iconVariants = {
   init: {
     opcaity: 0
@@ -18,12 +20,16 @@ const iconVariants = {
 }
 
 
+
 function Portfolio() {
   const [index,setIndex] = useState(0)
 
   useEffect(()=> {
     
   }, [index]);
+
+  const isMobile = useMediaQuery({query:'(max-width: 768px)'})
+
 
   const checkPage = () => {
     switch(content[index].name){
@@ -41,15 +47,22 @@ function Portfolio() {
   const previous = () => {
     index===0?setIndex(content.length-1):setIndex(index-1)
   }
-  
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => previous(),
+    onSwipedRight: () => next(),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true
+  });
+
   return(
        
 
-    <div className="page" >
-      
+    <div className="page" {...isMobile&&handlers}>
+      {isMobile&&<img className='swiper disable-drag' src={swipe}  alt="" />}
       <motion.div className="portfolio-title mb50"  >
         <span></span>
-        <motion.h1 style={{textAlign:'center'}} initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.3,duration:0.8}} exit={{opacity:0,transition:{duration:0.4}}}>{content[index].title}</motion.h1>
+        <motion.h1 initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.3,duration:0.8}} exit={{opacity:0,transition:{duration:0.4}}}>{content[index].title}</motion.h1>
         
         
       </motion.div>
