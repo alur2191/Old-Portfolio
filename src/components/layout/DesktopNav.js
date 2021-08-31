@@ -2,6 +2,7 @@ import {useRef,useEffect} from 'react'
 import Navbar from'./Navbar'
 import {motion} from 'framer-motion'
 import { useMediaQuery } from 'react-responsive'
+import {Link} from 'react-router-dom'
 
 export default function DesktopNav() {
   useEffect(()=>{
@@ -14,7 +15,7 @@ export default function DesktopNav() {
   const isMobile = useMediaQuery({query:'(max-width: 768px)'})
   return (
     <div id='sidebar' >
-      <span style={{fontWeight:'bold', fontSize:20, marginRight:25}}>DAVISjs</span>
+      <Link className='logo' to={'/'} style={{fontWeight:'bold', fontSize:20, marginRight:25}}>DAVISjs</Link>
       <Navbar />
       <span className="clickable">
         <i 

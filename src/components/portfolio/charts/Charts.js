@@ -17,7 +17,7 @@ export default function Charts({index}) {
     <motion.div className="portfolio-details" initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.8}} exit={{opacity:0,transition:{duration:0.4}}}>
         
         <motion.div 
-          id="charts" className="disable-select " 
+          id="charts" className="disable-select portfolio-showcase" 
           style={{position:'relative',  backgroundColor:'grey', height:400,width:280}} 
           initial={{opacity:0,scaleY:0}} 
           animate={{opacity:1,scaleY:1}} 
