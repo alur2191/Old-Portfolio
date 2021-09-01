@@ -2,22 +2,25 @@ import {useState} from 'react';
 import { send } from 'emailjs-com';
 import '../../main.css';
 import {motion}from 'framer-motion';
-import {name,email,message} from '../../env/email'
+import mail from '../../env/mail'
+import { concatSeries } from 'async';
 function Contact() {
 
   const [toSend, setToSend] = useState({
-    name,
-    email,
-    message,
+    name: '',
+    email: '',
+    message: '',
+    
   });
 
   const onSubmit = (e) => {
     e.preventDefault();
+    
     send(
-      'service_wqp6r7t',
-      'template_mq0xt6h',
+      mail.serviceId,
+      mail.templateId,
       toSend,
-      'user_wcMgfp8uKij9iJL0SmQGv'
+      mail.userId
     )
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
