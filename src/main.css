@@ -63,8 +63,8 @@ h6 {
 
 input,
 textarea {
-  background: #afafaf;
-  border: 1px solid #737373;
+  background: #e3e3e3;
+  border: 1px solid #b2b2b2;
 }
 
 label {
@@ -245,6 +245,7 @@ ul > li:last-child {
 .swiper {
   animation: swipe 0.8s;
   animation-iteration-count: 3;
+  animation-delay: 1.5s;
   opacity: 0;
   position: absolute;
   top: 100px;
@@ -280,7 +281,7 @@ ul > li:last-child {
   transition: all 0.5s;
 }
 .active {
-  font-size: 20px;
+  font-size: 1.3rem;
   transition: all 0.5s;
 }
 
@@ -423,11 +424,11 @@ ul > li:last-child {
     text-transform: uppercase;
   }
   #about {
-    padding: 0 130px;
+    padding: 0 80px;
   }
 
-  #about > h1 {
-    font-size: 1.5rem;
+  h1 {
+    font-size: 1.8rem;
   }
 
   .portfolio-showcase {
@@ -458,6 +459,11 @@ ul > li:last-child {
   .mb50 {
     margin-bottom: 50px;
   }
+
+  .page {
+    display: block;
+    margin-top: 80px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -465,6 +471,9 @@ ul > li:last-child {
     background: var(--primary-color-bright);
   }
 
+  h1 {
+    font-size: 1.6rem;
+  }
   #about {
     padding: 0 30px;
   }
@@ -487,7 +496,6 @@ ul > li:last-child {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
-    font-size: 24px;
   }
 
   #main {
@@ -521,7 +529,11 @@ ul > li:last-child {
 
   #navbar > ul > li > a {
     color: var(--primary-color-bright);
-    text-decoration: none;
+  }
+
+  #navbar > ul > li > a.active {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
   }
 
   #navbar > ul > li > a:visited {
@@ -574,11 +586,12 @@ ul > li:last-child {
   }
   .nav-slider > #navbar > ul > li {
     color: var(--primary-color-bright);
-    font-size: 18px;
+    font-size: 1.1rem;
     margin-bottom: 30px;
     margin-right: 0px;
     text-align: center;
   }
+
   .nav-slider > span {
     position: absolute;
     top: 15px;
