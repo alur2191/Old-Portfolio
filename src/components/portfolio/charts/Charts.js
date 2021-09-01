@@ -10,7 +10,7 @@ import logo from '../../../img/logo-logistics.png'
 // import bem from '../../img/bem-bw.svg'
 import Description from '../Description'
 import content from '../content'
-
+import charts from '../../../img/charts.jpg'
 export default function Charts({index}) {
   return (
     
@@ -18,11 +18,12 @@ export default function Charts({index}) {
         
         <motion.div 
           id="charts" className="disable-select portfolio-showcase" 
-          style={{position:'relative',  backgroundColor:'grey', height:400,width:280}} 
-          initial={{opacity:0,scaleY:0}} 
-          animate={{opacity:1,scaleY:1}} 
+          style={{position:'relative',  backgroundImage:'grey', height:400,width:280}} 
+          initial={{opacity:0,scaleX:0}} 
+          animate={{opacity:1,scaleX:1}} 
           transition={{duration:0.8}} 
           exit={{opacity:0,transition:{duration:0.4},scaleX:0}}>
+            <img src={charts} alt="Cryptocurrency Charts website" />
         </motion.div>
         
         <Description index={index}/>

@@ -4,24 +4,25 @@ import PageContext from '../../context/page/pageContext'
 import { useMediaQuery } from 'react-responsive'
 
 export default function Navbar({menuRef}) {
+
   const arrowRef = useRef();
-  const [current,setCurrent] = useState('')
-  useEffect(() => {
-    const pathname = window.location.pathname
-    setCurrent(pathname)
-    currentPage(pathname)
-    
-  }, [])
+  const {page, changePage} = useContext(PageContext) 
   const isMobile = useMediaQuery({query:'(max-width: 768px)'})
+  const pathname = window.location.pathname
+
+  useEffect(() => {
+    currentPage(pathname)
+  }, [])
+  
 
 
-  const currentPage = (page) => {
+  const currentPage = (current) => {
     switch(true){
-      case page === '/':
+      case current === '/':
         return arrowRef.current.style.marginTop = '-80px';
-      case page === '/portfolio':
+      case current === '/portfolio':
         return arrowRef.current.style.marginTop = '0px'
-      case page === '/contact':
+      case current === '/contact':
         return arrowRef.current.style.marginTop = '80px'
     }
   }
@@ -32,20 +33,20 @@ export default function Navbar({menuRef}) {
       <div id='navbar'>
         <ul>
           <li><NavLink exact className='nav-item' activeClassName="active" to={'/'} onMouseOver={() => arrowRef.current.style.marginTop = '-80px'} onClick={()=>{
-            setCurrent('/')
+            changePage('/')
             if(isMobile){menuRef.current.style.display = 'none'}
             arrowRef.current.style.marginTop = '-80px'
-            }} onMouseOut={()=>currentPage(current)}>About</NavLink></li>
+            }} onMouseOut={()=>currentPage(pathname)}>About</NavLink></li>
           <li><NavLink exact className='nav-item' activeClassName="active" to={'/portfolio'} onMouseOver={() => arrowRef.current.style.marginTop = '0px'} onClick={()=>{
-            setCurrent('/portfolio')
+            changePage('/portfolio')
             if(isMobile){menuRef.current.style.display = 'none'}
             arrowRef.current.style.marginTop = '0px'
-            }} onMouseOut={()=>currentPage(current)}>Portfolio</NavLink></li>
+            }} onMouseOut={()=>currentPage(pathname)}>Portfolio</NavLink></li>
           <li><NavLink exact className='nav-item' activeClassName="active" onClick={()=>{
-            setCurrent('/contact')
+            changePage('/contact')
             if(isMobile){menuRef.current.style.display = 'none'}
             arrowRef.current.style.marginTop = '80px'
-            }} to={'/contact'} onMouseOver={() => {arrowRef.current.style.marginTop = '80px' }} onMouseOut={()=>currentPage(current)}>Contact</NavLink></li>
+            }} to={'/contact'} onMouseOver={() => {arrowRef.current.style.marginTop = '80px' }} onMouseOut={()=>currentPage(pathname)}>Contact</NavLink></li>
         </ul>
         <span className='nav-arrow' ref={arrowRef}>
         </span>

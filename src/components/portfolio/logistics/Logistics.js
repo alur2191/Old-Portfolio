@@ -34,26 +34,27 @@ export default function Logistics({index}) {
               animate={{ opacity:1, marginTop: "0px" }}
               transition={{ delay:0.3 }}>
               <p style={{marginRight:'auto', marginLeft: 60, marginBottom:5, marginTop:10}}>Origin</p>
-              <div>
+              <div style={{display:'flex', marginLeft: 30}}>
                 <i className="las la-map-marker-alt" 
-                style={{ background:'#efefef', display:'inline',fontSize:20,position:'relative',top:2, border:'#d1d1d1 solid 1px', borderRight:0, paddingTop:1,paddingBottom:2, paddingLeft:3, paddingRight:3,marginLeft: 33}}
+                style={{ background:'#efefef', fontSize:20, border:'#d1d1d1 solid 1px', borderRight:0, paddingTop:2,paddingBottom:2, paddingLeft:3, paddingRight:3}}
                 ></i>
-                <input 
-                disabled 
-                type="text" 
-                style={{borderRadius:0, border:'#d1d1d1 solid 1px', borderLeft:0, width: 170, height:22, background:'#f9f9f9', marginLeft:'auto',marginRight:'auto'}}/>
+                <span style={{marginLeft:27,position:'absolute',borderRadius:0, border:'#d1d1d1 solid 1px', borderLeft:0, width: 170, height:24, background:'#f9f9f9', marginRight:'auto'}}></span>
+                
               </div>
             </motion.div>
             <motion.div style={{display:'flex',justifyContent:'center',flexDirection:'column'}} initial={{ opacity:0,marginTop:"20px" }}
               animate={{ opacity:1, marginTop:"0px" }}
               transition={{ delay:0.4}}>
               <p style={{marginRight:'auto',marginLeft: 60,marginBottom:5, marginTop:5}}>Destination</p>
-              <div>
+              <div style={{display:'flex', marginLeft: 30}}>
                 
-                <i className="las la-map-marker-alt" style={{background:'#efefef',display:'inline',fontSize:20,position:'relative',top:2, border:'#d1d1d1 solid 1px', borderRight:0, paddingTop:1,paddingBottom:2, paddingLeft:3,paddingRight:3,marginLeft: 33}}></i>
-                <input disabled type="text" style={{borderRadius:0, border:'#d1d1d1 solid 1px', borderLeft:0, width: 170, height:22, background:'#f9f9f9', marginLeft:'auto',marginRight:'auto'}}/>
+                <i className="las la-map-marker-alt" 
+                style={{ background:'#efefef', fontSize:20, border:'#d1d1d1 solid 1px', borderRight:0, paddingTop:2,paddingBottom:2, paddingLeft:3, paddingRight:3}}
+                ></i>
+                <span style={{marginLeft:27,position:'absolute',borderRadius:0, border:'#d1d1d1 solid 1px', borderLeft:0, width: 170, height:24, background:'#f9f9f9', marginRight:'auto'}}></span>
               </div>
             </motion.div>
+            
           </motion.div>
         </div>
         <Description index={index}/>

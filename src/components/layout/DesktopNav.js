@@ -1,13 +1,10 @@
-import {useRef,useEffect} from 'react'
+import {useRef} from 'react'
 import Navbar from'./Navbar'
 import {motion} from 'framer-motion'
 import { useMediaQuery } from 'react-responsive'
-import {Link} from 'react-router-dom'
 
 export default function DesktopNav() {
-  useEffect(()=>{
-    isMobile && console.log('test');
-  },[])
+  
   const date = new Date().getFullYear()
   // const checkActive 
 

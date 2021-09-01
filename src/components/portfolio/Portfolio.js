@@ -1,7 +1,8 @@
-import React,{useState,useEffect,useRef} from 'react';
+import React,{useState,} from 'react';
 import '../../main.css';
 import Logistics from './logistics/Logistics'
 import Charts from './charts/Charts'
+import Brokerage from './brokerage/Brokerage'
 import {motion} from 'framer-motion'
 import content from './content'
 import { useSwipeable } from 'react-swipeable';
@@ -10,12 +11,6 @@ import swipe from '../../img/swipe.png'
 
 function Portfolio() {
   const [index,setIndex] = useState(0)
-
-  useEffect(()=> {
-    if(swiperRef.current != null){
-      setTimeout(()=>swiperRef.current.style.display = 'none', 4000)
-    }
-  }, []);
 
   const isMobile = useMediaQuery({query:'(max-width: 768px)'})
 
@@ -26,6 +21,8 @@ function Portfolio() {
         return <Logistics index={index}/>
       case 'charts':
         return <Charts index={index}/>
+      case 'brokerage':
+        return <Brokerage index={index}/>
     }
   }
 
@@ -43,13 +40,12 @@ function Portfolio() {
     preventDefaultTouchmoveEvent: true,
     trackMouse: true
   });
-  const swiperRef = useRef() 
   return(
        
 
     <div className="page" {...isMobile&&handlers}>
-      {isMobile&&<img className='swiper disable-drag' ref={swiperRef} src={swipe}  alt="Swiper" />}
-      <motion.div className="portfolio-title mb50"  >
+      {isMobile&&<img className='swiper disable-drag' src={swipe}  alt="Swiper" />}
+      <motion.div className="portfolio-title"  >
         <span></span>
         <motion.h1 initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.3,duration:0.8}} exit={{opacity:0,transition:{duration:0.4}}}>{content[index].title}</motion.h1>
         

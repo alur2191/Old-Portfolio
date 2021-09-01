@@ -96,7 +96,7 @@ function About() {
             animate={{opacity:1}} 
             transition={{delay:0.6,duration:0.3}} 
             exit={{opacity:0,scale:0.8,transition:{duration:0.4}}}>
-              I have been practicing graphic design for several years prior to studying programming- experience with various Adobe products: Photoshop, Xd and Illustrator. Besides practicing graphic design software skills, I've spent time studying design principles and brand strategy.
+              I have been practicing graphic design for several years prior to studying programming - experience with various Adobe products: Photoshop, Xd and Illustrator. Besides practicing graphic design software skills, I've spent time studying design principles and brand strategy.
             </motion.p>
 
           </div>
