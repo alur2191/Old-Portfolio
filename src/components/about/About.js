@@ -2,7 +2,6 @@ import React,{useEffect,useRef} from 'react';
 import '../../main.css';
 import {motion} from 'framer-motion'
 import about from '../../img/about.jpg'
-import {Link} from 'react-router-dom'
 
 function About() {
 
@@ -75,7 +74,7 @@ function About() {
     
         <div  className="page">
           <div id='about'>
-            <motion.h1 className="mb50" style={{ textAlign:'center'}} initial={{opacity:0,scale:1}} animate={{opacity:1}} transition={{duration:0.3}} exit={{opacity:0,scale:0.8,transition:{duration:0.4}}}>I'm a Front-End Engineer</motion.h1>
+            <motion.h1 className="mb50" style={{ textAlign:'center'}} initial={{opacity:0,scale:1}} animate={{opacity:1}} transition={{duration:0.3}} exit={{opacity:0,scale:0.8,transition:{duration:0.4}}}>I'm a Frontend Engineer</motion.h1>
             
             <motion.img id='about-img' src={about} alt="Frontend developer" initial={{opacity:0,scale:1}} animate={{opacity:1}} transition={{delay:0.2,duration:0.3}} exit={{opacity:0,scale:0.8,transition:{duration:0.4}}} />
             <motion.p initial={{opacity:0,scale:1}} animate={{opacity:1}} transition={{delay:0.4,duration:0.3}} exit={{opacity:0,scale:0.8,transition:{duration:0.4}}}>I am a Frontend engineer with limited Backend experience. My focus is on JavaScript with React.js as my framework of choice. Some of the libraries I've used in my projects are ThreeJS, and Framer Motion, and GreenSock GSAP. Experience setting up CMS (Wordpress, Joomla) websites through FTP and SSH, managing MySQL databases with phpMyAdmin, and deploying on CPanel and static hosting.</motion.p> 

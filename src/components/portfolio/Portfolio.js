@@ -23,6 +23,8 @@ function Portfolio() {
         return <Charts index={index}/>
       case 'brokerage':
         return <Brokerage index={index}/>
+      default:
+          return <Charts index={1}/>
     }
   }
 

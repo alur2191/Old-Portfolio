@@ -1,57 +1,36 @@
-import { useRef, useState, useEffect, useContext } from 'react'
-import {NavLink} from 'react-router-dom'
-import PageContext from '../../context/page/pageContext'
+import {useRef} from 'react'
+import NavMenu from'./NavMenu'
+import {motion} from 'framer-motion'
 import { useMediaQuery } from 'react-responsive'
 
-export default function Navbar({menuRef}) {
-
-  const arrowRef = useRef();
-  const {page, changePage} = useContext(PageContext) 
+export default function Navbar() {
+  // menuRef used for mobile dropdown menu 
+  const menuRef = useRef()
+  // checking if mobile device using react-responsive
   const isMobile = useMediaQuery({query:'(max-width: 768px)'})
-  const pathname = window.location.pathname
-
-  useEffect(() => {
-    currentPage(pathname)
-  }, [])
-  
-
-
-  const currentPage = (current) => {
-    switch(true){
-      case current === '/':
-        return arrowRef.current.style.marginTop = '-80px';
-      case current === '/portfolio':
-        return arrowRef.current.style.marginTop = '0px'
-      case current === '/contact':
-        return arrowRef.current.style.marginTop = '80px'
-    }
-  }
-  const date = new Date().getFullYear()
-  // const checkActive 
   return (
-    
-      <div id='navbar'>
-        <ul>
-          <li><NavLink exact className='nav-item' activeClassName="active" to={'/'} onMouseOver={() => arrowRef.current.style.marginTop = '-80px'} onClick={()=>{
-            changePage('/')
-            if(isMobile){menuRef.current.style.display = 'none'}
-            arrowRef.current.style.marginTop = '-80px'
-            }} onMouseOut={()=>currentPage(pathname)}>About</NavLink></li>
-          <li><NavLink exact className='nav-item' activeClassName="active" to={'/portfolio'} onMouseOver={() => arrowRef.current.style.marginTop = '0px'} onClick={()=>{
-            changePage('/portfolio')
-            if(isMobile){menuRef.current.style.display = 'none'}
-            arrowRef.current.style.marginTop = '0px'
-            }} onMouseOut={()=>currentPage(pathname)}>Portfolio</NavLink></li>
-          <li><NavLink exact className='nav-item' activeClassName="active" onClick={()=>{
-            changePage('/contact')
-            if(isMobile){menuRef.current.style.display = 'none'}
-            arrowRef.current.style.marginTop = '80px'
-            }} to={'/contact'} onMouseOver={() => {arrowRef.current.style.marginTop = '80px' }} onMouseOut={()=>currentPage(pathname)}>Contact</NavLink></li>
-        </ul>
-        <span className='nav-arrow' ref={arrowRef}>
+    <div id='navbar'>
+      <span className='logo disable-select'>DAVISjs</span>
+      <NavMenu />
+      <i 
+      className="nav-button clickable las la-bars"
+      onClick={()=>{
+        return menuRef.current.style.display = 'block'
+      }}></i>
+      {isMobile &&
+      <motion.div className="nav-mobile" ref={menuRef}>
+        <NavMenu menuRef={menuRef}/>
+        <span className="clickable">
+          <i 
+          className="las la-times" 
+          style={{fontSize:30}} 
+          onClick={()=>{
+            return menuRef.current.style.display = 'none'
+          }}
+          ></i>
         </span>
-        
-      </div>
-      
+      </motion.div>
+      }
+    </div>
   )
 }

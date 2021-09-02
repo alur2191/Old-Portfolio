@@ -3,7 +3,7 @@ import { send } from 'emailjs-com';
 import '../../main.css';
 import {motion}from 'framer-motion';
 import mail from '../../env/mail'
-import { concatSeries } from 'async';
+
 function Contact() {
 
   const [toSend, setToSend] = useState({
@@ -43,8 +43,8 @@ function Contact() {
               <motion.h1 initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.3,duration:0.8}} exit={{opacity:0,transition:{duration:0.4}}}>Contact Me</motion.h1>
               <motion.ul initial={{opacity:0, scale: 1}} animate={{opacity:1}} transition={{delay:0.3,duration:0.8}} exit={{opacity:0,transition:{duration:0.4}, scale:0.4}}>
                 <li style={{textTransform:'none'}}><i className="las la-envelope" style={{fontSize:22,marginRight:4}}></i> dandavisjs@protonmail.com</li>
-                <li><i class="las la-phone" style={{fontSize:22,marginRight:4}}></i>{`(903) 033 3333`}</li>
-                <li><i class="lab la-github" style={{fontSize:25,marginRight:4}}></i><i class="lab la-behance" style={{fontSize:25,marginRight:4}}></i><i class="lab la-instagram" style={{fontSize:25}}></i></li>
+                <li><i className="las la-phone" style={{fontSize:22,marginRight:4}}></i>{`(903) 033 3333`}</li>
+                <li><i className="lab la-github" style={{fontSize:25,marginRight:4}}></i><i className="lab la-behance" style={{fontSize:25,marginRight:4}}></i><i className="lab la-instagram" style={{fontSize:25}}></i></li>
               </motion.ul>
               
             </div>
