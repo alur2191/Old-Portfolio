@@ -151,7 +151,7 @@ ul > li {
   text-decoration: none;
   font-size: 1.4rem;
   justify-content: flex-end;
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 #nav-menu {
@@ -190,19 +190,6 @@ ul > li {
   font-size: 30px;
 }
 
-.slide-nav {
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  padding: 0;
-}
-.slide-nav:hover {
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  padding: 0;
-}
-
 .page {
   display: flex;
   justify-content: center;
@@ -219,7 +206,11 @@ ul > li {
   line-height: 1.7;
 }
 
-#about-img {
+#about > h1 {
+  text-align: center;
+}
+
+#about > img {
   float: left;
   height: 400px;
   margin-right: 20px;
@@ -239,9 +230,14 @@ ul > li {
 
 .portfolio-description {
   display: flex;
-  justify-content: center;
-  margin-left: 100px;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 450;
   height: 400px;
+  margin-left: 100px;
+  display: flex;
+  line-height: 1.7;
+  text-align: center;
 }
 
 .portfolio-details {
@@ -251,21 +247,35 @@ ul > li {
   margin-left: 100px;
 }
 
-.portfolio-title {
-  display: grid;
-  grid-template-columns: 280px 520px;
-  margin-bottom: 40px;
-  margin-left: 100px;
+#portfolio > h1 {
+  margin-bottom: 80px;
   text-align: center;
-}
-.portfolio-title > h1 {
-  margin-left: 100px;
 }
 .portfolio-nav {
   display: flex;
   justify-content: flex-end;
   margin-top: 50px;
   margin-right: 50px;
+}
+
+.portfolio-nav > span {
+  margin: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.portfolio-nav > button {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+}
+.portfolio-nav > button:hover {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  padding: 0;
 }
 
 .swiper {
@@ -303,7 +313,7 @@ ul > li {
   transition: margin-top 0.5s ease-out;
   animation-direction: reverse;
 }
-.nav-item {
+#nav-menu > ul > li > a {
   transition: all 0.5s;
 }
 
@@ -458,7 +468,7 @@ ul > li {
     text-transform: uppercase;
   }
   #about {
-    padding: 0 80px;
+    padding: 0 100px;
   }
 
   h1 {
@@ -484,10 +494,9 @@ ul > li {
     justify-content: space-around;
     margin: 0;
   }
-  .portfolio-title {
-    display: flex;
-    justify-content: center;
-    margin: 0;
+
+  .portfolio-nav {
+    margin-right: 100px;
   }
 
   .mb50 {
@@ -522,7 +531,7 @@ ul > li {
     padding: 0 30px;
   }
 
-  #about-img {
+  #about > img {
     float: none;
     display: block;
     margin-left: auto;
@@ -622,16 +631,6 @@ ul > li {
     right: 30px;
   }
 
-  .portfolio-title {
-    display: initial;
-    margin-left: 0;
-    margin-bottom: 0;
-  }
-
-  .portfolio-title > h1 {
-    margin-left: 0px;
-  }
-
   .portfolio-details {
     display: flex;
     flex-direction: column;
@@ -648,8 +647,11 @@ ul > li {
   #logistics {
     margin-bottom: 100px;
   }
-  .portfolio-description > div > p {
-    padding: 0px 15px;
+  #portfolio > h1 {
+    margin-bottom: 30px;
+  }
+  .portfolio-description > p {
+    padding: 0px 30px;
   }
   .portfolio-nav {
     margin-top: 0;
