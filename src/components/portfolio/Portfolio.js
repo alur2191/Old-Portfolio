@@ -14,7 +14,9 @@ function Portfolio() {
   useEffect(() => {
     isMobile &&
       setTimeout(() => {
-        swipeRef.current.style.display = 'none';
+        if (swipeRef.current != null) {
+          swipeRef.current.style.display = 'none';
+        }
       }, 3000);
   });
   // Indexing for each portfolio item
@@ -64,7 +66,7 @@ function Portfolio() {
   const swipeRef = useRef();
   return (
     // if isMobile is true, swiping is enabled
-    <div id='portfolio' className='page' {...(isMobile && handlers)}>
+    <div id='portfolio' {...(isMobile && handlers)}>
       {/* if isMobile is true, show hint image */}
       {isMobile && swiper()}
 

@@ -1,12 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import html5 from '../../img/html5-bw.svg';
-import css3 from '../../img/css3-bw.svg';
-import bootstrap from '../../img/bootstrap-bw.svg';
-import gsap from '../../img/gsap-greensock-bw.svg';
-import js from '../../img/js-bw.svg';
+import Stack from './Stack';
 import content from './content';
 
+// import bem from '../../img/bem-bw.svg'
 export default function Description({ index }) {
   return (
     <motion.div
@@ -46,7 +43,8 @@ export default function Description({ index }) {
         <button style={{ width: 160 }}>VIEW LIVE</button>
       </motion.div>
       <div className='stack-icons'>
-        <motion.img
+        <Stack stack={content[index].stack} />
+        {/* <motion.img
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.3 }}
@@ -85,7 +83,7 @@ export default function Description({ index }) {
           src={bootstrap}
           style={{ height: 60 }}
           alt='Bootstrap'
-        />
+        /> */}
       </div>
     </motion.div>
   );

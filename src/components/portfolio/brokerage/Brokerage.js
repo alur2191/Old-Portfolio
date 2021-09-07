@@ -1,13 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import html5 from '../../../img/html5-bw.svg';
-import css3 from '../../../img/css3-bw.svg';
-import bootstrap from '../../../img/bootstrap-bw.svg';
-import gsap from '../../../img/gsap-greensock-bw.svg';
-import js from '../../../img/js-bw.svg';
 import brokerage from '../../../img/brokerage.jpg';
 import logo from '../../../img/logo-brokerage.png';
-// import bem from '../../img/bem-bw.svg'
 import Description from '../Description';
 
 export default function Brokerage({ index }) {
@@ -19,33 +13,28 @@ export default function Brokerage({ index }) {
       transition={{ duration: 0.8 }}
       exit={{ opacity: 0, transition: { duration: 0.4 } }}
     >
-      <div id='brokerage' className='disable-select portfolio-showcase'>
+      <div id='brokerage' className='portfolio-showcase disable-select'>
         <motion.img
-          className='disable-drag'
           src={brokerage}
           alt='Brokerage Website'
+          className='disable-drag'
           initial={{ opacity: 0, marginLeft: -100 }}
           animate={{ opacity: 1, marginLeft: 0 }}
           transition={{ duration: 0.5 }}
         />
         <motion.div
+          className='showcase-navbar'
           style={{
-            position: 'absolute',
-            top: 0,
             backgroundColor: 'white',
-            width: 280,
-            display: 'flex',
-            justifyContent: 'center',
           }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
           <img
-            className='disable-drag'
-            style={{ height: 20, padding: '15px 0' }}
             src={logo}
             alt='Brokerage Website Logo'
+            className='disable-drag'
           />
         </motion.div>
         <motion.div
