@@ -269,7 +269,17 @@ ul > li {
   text-align: center;
 }
 
-.stack-icons > img {
+.portfolio-description > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.stack-icons > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.stack-icons > ul > li {
   margin-right: 10px;
 }
 
@@ -418,6 +428,7 @@ ul > li {
 
 #contacts > form > button {
   width: 120px;
+  margin-right: 15px;
 }
 
 @media (min-width: 769px) and (max-width: 1200px),
@@ -753,7 +764,15 @@ ul > li {
   #contacts > div > ul {
     margin-bottom: 20px;
   }
-
+  #contacts > form {
+    display: flex;
+    flex-direction: column;
+  }
+  #contacts > form > button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
   #contacts > form > div:first-child {
     display: flex;
     flex-direction: column;

@@ -7,6 +7,7 @@ function TextLoop() {
       textLoop();
     }, 100);
   }, []);
+
   // looping text
   const textLoop = () => {
     // i represents the character number in a given text

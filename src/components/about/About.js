@@ -1,17 +1,29 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import '../../main.css';
 import { motion } from 'framer-motion';
 import about from '../../img/about.jpg';
 import TextLoop from './TextLoop';
 
+const pageVariants = {
+  hidden: {
+    opacity: 0,
+    scale: 1,
+  },
+  visible: {
+    opacity: 1,
+  },
+  exit: { opacity: 0, scale: 0.8, transition: { duration: 0.4 } },
+};
+
 function About() {
   return (
     <div id='about'>
       <motion.h1
-        initial={{ opacity: 0, scale: 1 }}
-        animate={{ opacity: 1 }}
+        variants={pageVariants}
+        initial='hidden'
+        animate='visible'
         transition={{ duration: 0.3 }}
-        exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.4 } }}
+        exit='exit'
       >
         I'm a Frontend Engineer
       </motion.h1>
@@ -19,16 +31,18 @@ function About() {
       <motion.img
         src={about}
         alt='Frontend developer'
-        initial={{ opacity: 0, scale: 1 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.3 }}
-        exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.4 } }}
+        variants={pageVariants}
+        initial='hidden'
+        animate='visible'
+        transition={{ delay: 0.1, duration: 0.3 }}
+        exit='exit'
       />
       <motion.p
-        initial={{ opacity: 0, scale: 1 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4, duration: 0.3 }}
-        exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.4 } }}
+        variants={pageVariants}
+        initial='hidden'
+        animate='visible'
+        transition={{ delay: 0.2, duration: 0.3 }}
+        exit='exit'
       >
         I am a Frontend engineer with limited Backend experience. My focus is on
         JavaScript with React.js as my framework of choice. Some of the
@@ -39,18 +53,20 @@ function About() {
       </motion.p>
       <motion.div
         style={{ marginBottom: 10 }}
-        initial={{ opacity: 0, scale: 1 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.3 }}
-        exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.4 } }}
+        variants={pageVariants}
+        initial='hidden'
+        animate='visible'
+        transition={{ delay: 0.3, duration: 0.3 }}
+        exit='exit'
       >
         <TextLoop />
       </motion.div>
       <motion.p
-        initial={{ opacity: 0, scale: 1 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.6, duration: 0.3 }}
-        exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.4 } }}
+        variants={pageVariants}
+        initial='hidden'
+        animate='visible'
+        transition={{ delay: 0.4, duration: 0.3 }}
+        exit='exit'
       >
         I have been practicing graphic design for several years prior to
         studying programming - experience with various Adobe products:
