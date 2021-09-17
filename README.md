@@ -3,6 +3,28 @@
 This is my personal portfolio built with React.
 
 ### Usage:
+
+Credentials to emailjs-com are passed from environment virables:
+
+You will need to comment out lines `5, 32-40` in `/src/components/contact/Contact.js`
+```sg
+// import mail from '../../env/mail';
+
+...
+
+// send(mail.serviceId, mail.templateId, toSend, mail.userId)
+//   .then((response) => {
+//     messageRef.current.innerHTML = 'Message sent.';
+//     setTimeout(() => (messageRef.current.innerHTML = ''), 10000);
+//   })
+//   .catch((err) => {
+//     messageRef.current.innerHTML = 'Failed to send a message.';
+//     setTimeout(() => (messageRef.current.innerHTML = ''), 10000);
+//   });
+```
+
+In root folder using terminal/command prompt:
+
 ```sg
 $ npm install
 ```
