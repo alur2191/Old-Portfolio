@@ -43,7 +43,7 @@ Font: <a href="https://fonts.adobe.com/fonts/aileron">Aileron</a>
 
 Dependencies: emailjs-com, framer-motion, react-swipeable, react-responsive.
 
-### Self-made components
+### Components worth mentioning
 
 **Dynamic navigation menu arrow**
 
