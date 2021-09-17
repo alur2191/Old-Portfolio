@@ -1,7 +1,11 @@
 @font-face {
-  font-family: 'Aileron-Regular';
-  src: local('Aileron-Regular'), url('./font/Aileron-Regular.otf') format('otf');
+    font-family: 'aileronthin';
+    src: url('./font/Aileron-Thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
+
+
 
 :root {
   --primary-color-dark: #191919;

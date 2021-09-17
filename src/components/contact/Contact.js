@@ -32,9 +32,11 @@ function Contact() {
     send(mail.serviceId, mail.templateId, toSend, mail.userId)
       .then((response) => {
         messageRef.current.innerHTML = 'Message sent.';
+        setTimeout(() => (messageRef.current.innerHTML = ''), 10000);
       })
       .catch((err) => {
         messageRef.current.innerHTML = 'Failed to send a message.';
+        setTimeout(() => (messageRef.current.innerHTML = ''), 10000);
       });
   };
 
@@ -93,6 +95,7 @@ function Contact() {
               type='text'
               id='name'
               name='name'
+              minlength='4'
               value={toSend.name}
               onChange={handleChange}
               required
@@ -134,6 +137,7 @@ function Contact() {
             id='message'
             cols='30'
             rows='10'
+            minlength='20'
             value={toSend.message}
             onChange={handleChange}
             required
@@ -144,7 +148,7 @@ function Contact() {
           variants={formVariants}
           initial='hidden'
           animate='visible'
-          transition={{ duration: 0.4, delay: isMobile ? 0 : 0.3 }}
+          transition={{ duration: 0.2, delay: isMobile ? 0 : 0.3 }}
           exit={{
             opacity: 0,
             scale: 0.4,
@@ -160,13 +164,13 @@ function Contact() {
           variants={formVariants}
           initial='hidden'
           animate='visible'
-          transition={{ duration: 0.4, delay: isMobile ? 0 : 0.3 }}
+          transition={{ duration: 0.2, delay: isMobile ? 0 : 0.3 }}
           exit={{
             opacity: 0,
             scale: 0.4,
             y: isMobile ? 0 : -50,
             x: isMobile ? 0 : 180,
-            transition: { duration: 0.4 },
+            transition: { duration: 0.2 },
           }}
         ></motion.span>
       </form>
