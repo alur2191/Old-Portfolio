@@ -48,7 +48,7 @@ function TextLoop() {
     const reverseType = () => {
       if (i > 0) {
         if (textRef.current != null) {
-          textRef.current.innerHTML = textRef.current.innerHTML.slice(0, -1);
+          textRef.current.innerHTML = textRef.current.innerHTML.slice(0, -1); 
         } else {
           return;
         }
