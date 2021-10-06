@@ -2,7 +2,6 @@ import { useState, useRef } from 'react';
 import { send } from 'emailjs-com';
 import '../../main.css';
 import { motion } from 'framer-motion';
-import mail from '../../env/mail';
 import { useMediaQuery } from 'react-responsive';
 
 const pageVariants = {
@@ -29,7 +28,12 @@ function Contact() {
   // onSubmit send an email using emailjs-com
   const onSubmit = (e) => {
     e.preventDefault();
-    send(mail.serviceId, mail.templateId, toSend, mail.userId)
+    send(
+      process.env.SERVICEID,
+      process.env.TEMPLATEID,
+      toSend,
+      process.env.USERID
+    )
       .then((response) => {
         messageRef.current.innerHTML = 'Message sent.';
         setTimeout(() => (messageRef.current.innerHTML = ''), 10000);
@@ -64,7 +68,7 @@ function Contact() {
           exit='exit'
         >
           <li style={{ textTransform: 'none' }}>
-            <i className='las la-envelope'></i> dandavisjs@protonmail.com
+            <i className='las la-envelope'></i> dandavisjs@protoncom
           </li>
           <li>
             <i className='las la-phone'></i>
