@@ -1,11 +1,9 @@
 @font-face {
-    font-family: 'aileronthin';
-    src: url('./font/Aileron-Thin-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'aileronthin';
+  src: url('./font/Aileron-Thin-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
-
-
 
 :root {
   --primary-color-dark: #191919;
@@ -126,6 +124,17 @@ ul > li {
   margin-right: auto;
   margin-left: auto;
   width: 700px;
+}
+
+#loading {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #191919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 
 /* Navbar */

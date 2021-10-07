@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './main.css';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
@@ -11,10 +11,15 @@ import About from './components/about/About';
 import Contact from './components/contact/Contact';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setLoading(false);
+  }, []);
   const location = useLocation();
 
   return (
     <PageState>
+      {loading ? <div id='loading'></div> : null}
       <Navbar />
       <div className='container'>
         <AnimatePresence exitBeforeEnter>
