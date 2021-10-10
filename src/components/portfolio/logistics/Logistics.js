@@ -56,7 +56,7 @@ export default function Logistics({ index }) {
           <motion.div
             className='logistics-form'
             initial={{ opacity: 0, marginTop: '20px' }}
-            animate={{ opacity: 1, marginTop: '0px' }}
+            animate={{ opacity: 1, marginTop: '5px' }}
             transition={{ delay: 0.3 }}
           >
             <p>Origin</p>

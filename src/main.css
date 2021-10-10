@@ -57,6 +57,11 @@ p {
   margin-bottom: 10px;
 }
 
+a {
+  color: #191919;
+  text-decoration: none;
+}
+
 button {
   background: var(--primary-color-bright);
   border: 1px solid var(--primary-color-dark);

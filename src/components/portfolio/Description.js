@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Stack from './Stack';
 import content from './content';
@@ -34,16 +35,20 @@ export default function Description({ index }) {
         animate='visible'
         transition={{ delay: 0.3, duration: 0.8 }}
       >
-        <i
-          className='lab la-github la-2x'
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            marginRight: 5,
-          }}
-        ></i>
-        <button style={{ width: 160 }}>VIEW LIVE</button>
+        <Link to={content[index].github}>
+          <i
+            className='lab la-github la-2x'
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              marginRight: 5,
+            }}
+          ></i>
+        </Link>
+        <Link to={content[index].link}>
+          <button style={{ width: 160 }}>VIEW LIVE</button>
+        </Link>
       </motion.div>
       <div className='stack-icons'>
         <Stack stack={content[index].stack} />
