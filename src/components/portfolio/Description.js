@@ -35,7 +35,7 @@ export default function Description({ index }) {
         animate='visible'
         transition={{ delay: 0.3, duration: 0.8 }}
       >
-        <Link to={content[index].github}>
+        <a href={content[index].github}>
           <i
             className='lab la-github la-2x'
             style={{
@@ -45,9 +45,11 @@ export default function Description({ index }) {
               marginRight: 5,
             }}
           ></i>
-        </Link>
-        <Link to={content[index].link}>
-          <button style={{ width: 160 }}>VIEW LIVE</button>
+        </a>
+        <Link>
+          <button style={{ width: 160 }}>
+            <a href={content[index].link}>VIEW LIVE</a>
+          </button>
         </Link>
       </motion.div>
       <div className='stack-icons'>
