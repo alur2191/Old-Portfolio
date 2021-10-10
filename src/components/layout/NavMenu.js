@@ -51,12 +51,12 @@ export default function NavMenu({ menuRef, match }) {
             exact
             activeClassName='active'
             to={'/portfolio'}
-            onMouseOver={() => (arrowRef.current.style.marginTop = '42px')}
+            onMouseOver={() => (arrowRef.current.style.marginTop = '40px')}
             onClick={() => {
               if (isMobile) {
                 menuRef.current.style.display = 'none';
               }
-              arrowRef.current.style.marginTop = '42px';
+              arrowRef.current.style.marginTop = '40px';
             }}
             onMouseOut={() => currentPage(page)}
           >
@@ -69,13 +69,13 @@ export default function NavMenu({ menuRef, match }) {
             activeClassName='active'
             to={'/contact'}
             onMouseOver={() => {
-              arrowRef.current.style.marginTop = '82px';
+              arrowRef.current.style.marginTop = '80px';
             }}
             onClick={() => {
               if (isMobile) {
                 menuRef.current.style.display = 'none';
               }
-              arrowRef.current.style.marginTop = '82px';
+              arrowRef.current.style.marginTop = '80px';
             }}
             onMouseOut={() => currentPage(page)}
           >
