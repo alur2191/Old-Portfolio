@@ -1,6 +1,7 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect, useContext } from 'react';
 import { send } from 'emailjs-com';
 import '../../main.css';
+import PageContext from '../../context/page/pageContext';
 import { motion } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
 
@@ -17,13 +18,20 @@ const formVariants = {
   visible: { opacity: 1, y: 0, x: 0 },
 };
 
-function Contact() {
+const Contact = ({ match }) => {
+  const { changePage, page } = useContext(PageContext);
+
   const [toSend, setToSend] = useState({
     name: '',
     email: '',
     message: '',
   });
 
+  useEffect(() => {
+    if (page !== match.url) {
+      changePage(match.url);
+    }
+  }, []);
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   // onSubmit send an email using emailjs-com
   const onSubmit = (e) => {
@@ -99,7 +107,7 @@ function Contact() {
               type='text'
               id='name'
               name='name'
-              minlength='4'
+              minLength='4'
               value={toSend.name}
               onChange={handleChange}
               required
@@ -141,7 +149,7 @@ function Contact() {
             id='message'
             cols='30'
             rows='10'
-            minlength='20'
+            minLength='20'
             value={toSend.message}
             onChange={handleChange}
             required
@@ -180,6 +188,6 @@ function Contact() {
       </form>
     </div>
   );
-}
+};
 
 export default Contact;

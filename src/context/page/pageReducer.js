@@ -1,21 +1,16 @@
-import {CHANGE_PAGE,FINISH_TRANSITION} from '../types'
+import { CHANGE_PAGE } from '../types';
 
- const pageReducer = (state,{type,payload}) => {
-  switch(type){
+const pageReducer = (state, { type, payload }) => {
+  switch (type) {
     case CHANGE_PAGE:
       return {
         ...state,
-        page:payload,
-        transition:true
-      }
-    case FINISH_TRANSITION:
-      return {
-        ...state,
-        transition:false
-      }
+        page: payload,
+        transition: true,
+      };
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default pageReducer
+export default pageReducer;

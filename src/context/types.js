@@ -1,2 +1,1 @@
-export const CHANGE_PAGE = 'CHANGE_PAGE'
-export const FINISH_TRANSITION = 'FINISH_TRANSITION'
+export const CHANGE_PAGE = 'CHANGE_PAGE';

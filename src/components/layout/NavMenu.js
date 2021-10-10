@@ -1,20 +1,19 @@
 import { useRef, useEffect, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
-import PageContext from '../../context/page/pageContext';
 import { useMediaQuery } from 'react-responsive';
+import PageContext from '../../context/page/pageContext';
 
-export default function NavMenu({ menuRef }) {
+export default function NavMenu({ menuRef, match }) {
+  const { page } = useContext(PageContext);
   // arrowRef used to configure the position of the navigation menu arrow on desktop
   const arrowRef = useRef();
-  // changePage is used to identify which page is viewed
-  const { changePage } = useContext(PageContext);
   // checking if mobile device using react-responsive
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   const pathname = window.location.pathname;
 
   useEffect(() => {
-    currentPage(pathname);
-  }, [pathname]);
+    currentPage(page);
+  }, [page]);
 
   // set arrow location poition to the current page
   const currentPage = (current) => {
@@ -37,7 +36,6 @@ export default function NavMenu({ menuRef }) {
             to={'/'}
             onMouseOver={() => (arrowRef.current.style.marginTop = '2px')}
             onClick={() => {
-              changePage('/');
               // if on a mobile device close the dropdown upon click
               if (isMobile) {
                 menuRef.current.style.display = 'none';
@@ -56,7 +54,6 @@ export default function NavMenu({ menuRef }) {
             to={'/portfolio'}
             onMouseOver={() => (arrowRef.current.style.marginTop = '42px')}
             onClick={() => {
-              changePage('/portfolio');
               if (isMobile) {
                 menuRef.current.style.display = 'none';
               }
@@ -76,7 +73,6 @@ export default function NavMenu({ menuRef }) {
               arrowRef.current.style.marginTop = '82px';
             }}
             onClick={() => {
-              changePage('/contact');
               if (isMobile) {
                 menuRef.current.style.display = 'none';
               }

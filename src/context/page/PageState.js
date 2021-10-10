@@ -1,42 +1,34 @@
-import React,{useReducer} from 'react'
-import PageReducer from './pageReducer'
-import PageContext from './pageContext'
-import {CHANGE_PAGE,FINISH_TRANSITION} from '../types'
+import React, { useReducer } from 'react';
+import PageReducer from './pageReducer';
+import PageContext from './pageContext';
+import { CHANGE_PAGE } from '../types';
 
-
-const PageState = ({children}) => {
+const PageState = ({ children }) => {
   const initialState = {
     transitioin: false,
-    page:'logistics'
-  }
+    page: '',
+  };
 
-  const [state,dispatch] = useReducer(PageReducer,initialState)
+  const [state, dispatch] = useReducer(PageReducer, initialState);
 
   const changePage = (data) => {
     dispatch({
-      type:CHANGE_PAGE,
-      payload:data
-    })
-    console.log(data);
-    finishTransition()
-  }
+      type: CHANGE_PAGE,
+      payload: data,
+    });
+  };
 
-  const finishTransition = () => {
-    dispatch({
-      type:FINISH_TRANSITION
-    })
-  }
-
-  return(
-    <PageContext.Provider value={{
-      transition:state.transition,
-      page:state.page,
-      changePage,
-      finishTransition
-    }}>
+  return (
+    <PageContext.Provider
+      value={{
+        transition: state.transition,
+        page: state.page,
+        changePage,
+      }}
+    >
       {children}
     </PageContext.Provider>
-  )
-}
+  );
+};
 
 export default PageState;

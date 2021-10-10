@@ -1,7 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useContext } from 'react';
 import { motion } from 'framer-motion';
 import { useSwipeable } from 'react-swipeable';
 import { useMediaQuery } from 'react-responsive';
+import PageContext from '../../context/page/pageContext';
 import '../../main.css';
 import swipe from '../../img/swipe.png';
 import Logistics from './logistics/Logistics';
@@ -16,8 +17,13 @@ const portfolioVariants = {
   exit: { opacity: 0, transition: { duration: 0.4 } },
 };
 
-function Portfolio() {
+const Portfolio = ({ match }) => {
+  const { changePage, page } = useContext(PageContext);
+
   useEffect(() => {
+    if (page !== match.url) {
+      changePage(match.url);
+    }
     isMobile &&
       setTimeout(() => {
         if (swipeRef.current != null) {
@@ -25,6 +31,7 @@ function Portfolio() {
         }
       }, 3000);
   });
+
   // Indexing for each portfolio item
   const [index, setIndex] = useState(0);
 
@@ -104,5 +111,5 @@ function Portfolio() {
       </motion.div>
     </div>
   );
-}
+};
 export default Portfolio;

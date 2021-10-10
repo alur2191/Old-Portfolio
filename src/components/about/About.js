@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import '../../main.css';
 import { motion } from 'framer-motion';
+import PageContext from '../../context/page/pageContext';
 import about from '../../img/about.jpg';
 import TextLoop from './TextLoop';
 
@@ -15,7 +16,15 @@ const pageVariants = {
   exit: { opacity: 0, scale: 0.8, transition: { duration: 0.4 } },
 };
 
-function About() {
+const About = ({ match }) => {
+  const { changePage, page } = useContext(PageContext);
+
+  useEffect(() => {
+    if (page !== match.url) {
+      changePage(match.url);
+    }
+  }, []);
+
   return (
     <div id='about'>
       <motion.h1
@@ -76,6 +85,6 @@ function About() {
       </motion.p>
     </div>
   );
-}
+};
 
 export default About;
