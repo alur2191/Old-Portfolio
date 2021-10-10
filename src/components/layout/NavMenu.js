@@ -9,7 +9,6 @@ export default function NavMenu({ menuRef, match }) {
   const arrowRef = useRef();
   // checking if mobile device using react-responsive
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
-  const pathname = window.location.pathname;
 
   useEffect(() => {
     currentPage(page);
@@ -42,7 +41,7 @@ export default function NavMenu({ menuRef, match }) {
               }
               arrowRef.current.style.marginTop = '2px';
             }}
-            onMouseOut={() => currentPage(pathname)}
+            onMouseOut={() => currentPage(page)}
           >
             About
           </NavLink>
@@ -59,7 +58,7 @@ export default function NavMenu({ menuRef, match }) {
               }
               arrowRef.current.style.marginTop = '42px';
             }}
-            onMouseOut={() => currentPage(pathname)}
+            onMouseOut={() => currentPage(page)}
           >
             Portfolio
           </NavLink>
@@ -78,7 +77,7 @@ export default function NavMenu({ menuRef, match }) {
               }
               arrowRef.current.style.marginTop = '82px';
             }}
-            onMouseOut={() => currentPage(pathname)}
+            onMouseOut={() => currentPage(page)}
           >
             Contact
           </NavLink>
