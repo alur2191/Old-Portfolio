@@ -31,8 +31,6 @@ $ npm install
 and
 ```sh
 $ npm start
-
-# Visit http://localhost:3000
 ```
 
 ### Resources
