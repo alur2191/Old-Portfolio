@@ -24,7 +24,7 @@ export default function NavMenu({ menuRef }) {
       case current === '/portfolio':
         return (arrowRef.current.style.marginTop = '42px');
       case current === '/contact':
-        return (arrowRef.current.style.marginTop = '82px');
+        return (arrowRef.current.style.marginTop = '78px');
     }
   };
   return (
