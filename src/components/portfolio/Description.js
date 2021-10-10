@@ -47,9 +47,9 @@ export default function Description({ index }) {
           ></i>
         </a>
         <Link>
-          <button style={{ width: 160 }}>
-            <a href={content[index].link}>VIEW LIVE</a>
-          </button>
+          <a class='button' href={content[index].link}>
+            VIEW LIVE
+          </a>
         </Link>
       </motion.div>
       <div className='stack-icons'>

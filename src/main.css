@@ -142,6 +142,22 @@ ul > li {
   z-index: 1;
 }
 
+.button {
+  background: var(--primary-color-bright);
+  border: 1px solid var(--primary-color-dark);
+  color: var(--primary-color-dark);
+  padding: 10px 10px;
+  transition: all 0.3s linear;
+}
+
+.button:hover {
+  background: var(--primary-color-dark);
+  border: 1px solid var(--primary-color-bright);
+  color: var(--primary-color-bright);
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
 /* Navbar */
 
 #navbar {
