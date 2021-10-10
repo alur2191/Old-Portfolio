@@ -69,13 +69,13 @@ export default function NavMenu({ menuRef, match }) {
             activeClassName='active'
             to={'/contact'}
             onMouseOver={() => {
-              arrowRef.current.style.marginTop = '80px';
+              arrowRef.current.style.marginTop = '78px';
             }}
             onClick={() => {
               if (isMobile) {
                 menuRef.current.style.display = 'none';
               }
-              arrowRef.current.style.marginTop = '80px';
+              arrowRef.current.style.marginTop = '78px';
             }}
             onMouseOut={() => currentPage(page)}
           >
