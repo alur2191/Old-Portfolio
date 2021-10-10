@@ -145,8 +145,8 @@ ul > li {
 .button {
   background: var(--primary-color-bright);
   border: 1px solid var(--primary-color-dark);
+  padding: 5px 40px;
   color: var(--primary-color-dark);
-  padding: 10px 10px;
   transition: all 0.3s linear;
 }
 
@@ -154,7 +154,7 @@ ul > li {
   background: var(--primary-color-dark);
   border: 1px solid var(--primary-color-bright);
   color: var(--primary-color-bright);
-  padding: 10px 30px;
+  padding: 5px 40px;
   cursor: pointer;
 }
 
