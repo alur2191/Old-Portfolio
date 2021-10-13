@@ -10,7 +10,7 @@ const content = [
   },
   {
     name: 'logistics',
-    title: 'Logsitics Transportation Website',
+    title: 'Logistics Transportation Website',
     description:
       'HTML5, CSS3 and JavaScript for a logistics transportation company. Animations made with GreenSock GSAP. Created basic visual identity guidelines resembling the logo that was made by a company hired designer',
     link: 'https://www.russotransport.com/',
