@@ -4,7 +4,7 @@ This is my personal portfolio built with React.
 
 ### Usage:
 
-Credentials to emailjs-com are passed from environment virables:
+Credentials to emailjs-com are passed with environment virables:
 
 You will need to comment out lines `5, 32-40` in `/src/components/contact/Contact.js`
 ```sg
