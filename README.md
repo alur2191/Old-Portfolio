@@ -2,6 +2,8 @@
 
 This is my personal portfolio built with React.
 
+Preview on [Netlify](https://priceless-feynman-5e83cd.netlify.app/)
+
 ### Usage:
 
 Credentials to emailjs-com are passed with environment virables:
