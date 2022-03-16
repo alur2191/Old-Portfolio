@@ -53,8 +53,8 @@ const About = ({ match }) => {
         transition={{ delay: 0.2, duration: 0.3 }}
         exit='exit'
       >
-        I am a Frontend engineer with limited Backend experience. My focus is on
-        JavaScript with React.js as my framework of choice. Some of the
+        I am a Full stack engineer. My focus is on
+        JavaScript with React.js, and Next.js as my frameworks of choice. Some of the
         libraries I've used in my projects are Framer Motion, React Three Fiber,
         and GreenSock GSAP. Experience setting up CMS (Wordpress, Joomla)
         websites through FTP and SSH, managing MySQL databases with phpMyAdmin,
