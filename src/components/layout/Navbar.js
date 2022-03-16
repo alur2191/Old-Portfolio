@@ -10,7 +10,7 @@ export default function Navbar() {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   return (
     <div id='navbar'>
-      <span className='logo disable-select'>DAVISjs</span>
+      <span className='logo disable-select'>Akmal</span>
       <NavMenu />
       <i
         className='nav-button clickable las la-bars'
